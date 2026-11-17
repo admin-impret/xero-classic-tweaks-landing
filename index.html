@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classic Tweaks for Xero - Lifetime License</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; color: #1a2b33; background: #f6f8f9; line-height: 1.6; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+  .card { background: #fff; border: 1px solid #e3e8ea; border-radius: 12px; padding: 32px; margin-bottom: 24px; }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  h2 { font-size: 18px; margin: 24px 0 8px; }
+  .sub { color: #52666f; margin: 0 0 24px; }
+  ul { padding-left: 20px; }
+  .price { font-size: 40px; font-weight: 700; margin: 8px 0 0; }
+  .price small { font-size: 15px; font-weight: 400; color: #52666f; }
+  .early { display: inline-block; background: #fff4d6; color: #7a5b00; border-radius: 6px; padding: 4px 10px; font-size: 13px; margin-top: 8px; }
+  .buy { display: inline-block; margin-top: 20px; background: #0b6bcb; color: #fff; border: 0; border-radius: 8px; padding: 14px 28px; font-size: 17px; font-weight: 600; cursor: pointer; }
+  .buy:hover { background: #0958a8; }
+  .muted { color: #52666f; font-size: 14px; }
+  footer { color: #7a8a91; font-size: 13px; text-align: center; margin-top: 32px; }
+  footer a { color: #52666f; }
+  nav a { margin-right: 14px; color: #0b6bcb; text-decoration: none; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>Classic Tweaks for Xero</h1>
+    <p class="sub">A small browser extension that makes the Xero web app calmer and denser to work in.</p>
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Compact classic layout</strong> (paid): tightens spacing on invoice and bill screens, closer to the classic invoicing feel, for faster data entry.</li>
+      <li><strong>Promo banner dismissal</strong> (free): automatically hides promotional banners and nags inside Xero.</li>
+    </ul>
+    <p class="muted">Each tweak can be switched on or off from the extension popup. Settings stay in your browser; nothing is collected or sent anywhere.</p>
+  </div>
+  <div class="card" id="buy">
+    <h2>Lifetime license</h2>
+    <p class="price">$5 <small>USD, one-time payment</small></p>
+    <span class="early">Early-bird price for the first 30 buyers. After that the price goes up.</span>
+    <p>One payment unlocks the compact classic layout forever, on all your browsers, including every future update.</p>
+    <button class="buy" id="buyButton">Buy lifetime license - $5</button>
+    <p class="muted" style="margin-top:16px">Secure checkout by Paddle, our payment provider. 14-day refund guarantee - see the <a href="refund.html">refund policy</a>. After checkout, your license key is emailed to you.</p>
+  </div>
+  <div class="card">
+    <nav>
+      <a href="refund.html">Refund policy</a>
+      <a href="terms.html">Terms of sale</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="mailto:support@impret.com">support@impret.com</a>
+    </nav>
+  </div>
+  <footer>
+    <p>Classic Tweaks for Xero is an independent tool and is not affiliated with or endorsed by Xero Limited.<br>Xero is a trademark of Xero Limited.</p>
+  </footer>
+</div>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+  Paddle.Initialize({ token: "live_f5d9afd2139cd73c0776945016c" });
+  document.getElementById("buyButton").addEventListener("click", function () {
+    Paddle.Checkout.open({
+      items: [{ priceId: "pri_01m7mtwe362hexynm30gd9erfs", quantity: 1 }]
+    });
+  });
+</script>
+</body>
+</html>
